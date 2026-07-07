@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riju Datta — AI Automation, Web Development & SaaS Engineering</title>
+<meta name="description" content="Riju Datta designs AI agents that run customer conversations and workflows automatically, builds websites engineered to convert, and takes SaaS ideas to production-ready platforms. Fixed pricing. Full code ownership.">
+<meta name="keywords" content="AI automation, AI agents, AI agency, website development, SaaS development, business automation, custom AI integration">
+<meta name="author" content="Riju Datta">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riju Datta — AI Automation, Web Development & SaaS Engineering">
+<meta property="og:description" content="AI systems that run without you, websites built to convert, and SaaS products taken from idea to production. Fixed pricing, full code ownership, direct communication.">
+<meta property="og:site_name" content="Riju Datta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Riju Datta — AI Automation, Web Development & SaaS Engineering">
+<meta name="twitter:description" content="AI systems that run without you, websites built to convert, and SaaS products taken from idea to production.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Riju Datta",
+  "description": "AI automation, website development, and SaaS engineering for founders, agencies, and growing businesses.",
+  "email": "rijudattaforbusiness@gmail.com",
+  "areaServed": "Worldwide",
+  "priceRange": "$249-$1999",
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Automation & AI Agents"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Development"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SaaS Development"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg:        #0e0f11;
+    --bg2:       #131518;
+    --card:      #181b1f;
+    --border:    #252830;
+    --accent:    #a8956a;
+    --accent2:   #7a8fa6;
+    --gold:      #c9aa72;
+    --green:     #6ab893;
+    --red:       #c47a7a;
+    --white:     #edeae4;
+    --gray:      #6b6f7a;
+    --lgray:     #9da3b0;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --radius: 14px;
+    --tr: .32s cubic-bezier(.4,0,.2,1);
+  }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--white); font-family:var(--font-body); font-size:16px; line-height:1.6; overflow-x:hidden; cursor:none; }
+
+  #cd,#cr { position:fixed; pointer-events:none; z-index:9999; border-radius:50%; transform:translate(-50%,-50%); }
+  #cd { width:6px; height:6px; background:var(--accent); }
+  #cr { width:34px; height:34px; border:1.5px solid rgba(168,149,106,.4); transition:width .22s,height .22s,border-color .22s; }
+
+  body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.03; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:220px; }
+  body::after { content:''; position:fixed; inset:0; z-index:0; pointer-events:none; background-image:linear-gradient(rgba(168,149,106,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(168,149,106,.025) 1px,transparent 1px); background-size:56px 56px; }
+
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:16px 6vw; backdrop-filter:blur(24px) saturate(1.5); background:rgba(14,15,17,.82); border-bottom:1px solid rgba(168,149,106,.1); transition:var(--tr); }
+  .logo { font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:var(--accent); text-decoration:none; letter-spacing:.03em; }
+  .logo span { color:var(--white); }
+  .nav-links { display:flex; gap:2.2rem; list-style:none; }
+  .nav-links a { font-size:.82rem; font-weight:500; color:var(--gray); text-decoration:none; text-transform:uppercase; letter-spacing:.07em; position:relative; transition:color var(--tr); }
+  .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--accent); transition:width var(--tr); }
+  .nav-links a:hover { color:var(--accent); }
+  .nav-links a:hover::after { width:100%; }
+  .nav-cta { font-family:var(--font-head); font-size:.8rem; font-weight:700; padding:.5rem 1.3rem; border-radius:8px; background:var(--accent); color:var(--bg); text-decoration:none; letter-spacing:.04em; transition:opacity var(--tr),transform var(--tr); }
+  .nav-cta:hover { opacity:.85; transform:scale(1.03); }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:none; padding:4px; background:none; border:none; }
+  .hamburger span { display:block; width:22px; height:2px; background:var(--accent); border-radius:2px; }
+
+  .hero { min-height:100vh; position:relative; display:flex; align-items:center; padding:120px 6vw 80px; overflow:hidden; }
+  .orb { position:absolute; border-radius:50%; filter:blur(90px); pointer-events:none; animation:float 9s ease-in-out infinite; }
+  .o1 { width:480px;height:480px;background:rgba(168,149,106,.07);top:-80px;right:-80px; }
+  .o2 { width:360px;height:360px;background:rgba(122,143,166,.06);bottom:-60px;left:-40px;animation-delay:-4s; }
+  .o3 { width:220px;height:220px;background:rgba(201,170,114,.04);top:45%;left:42%;animation-delay:-7s; }
+  @keyframes float { 0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-28px) scale(1.04);} }
+
+  .hero-inner { position:relative; z-index:1; max-width:780px; }
+  .hero-badge { display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.73rem; color:var(--accent); background:rgba(168,149,106,.08); border:1px solid rgba(168,149,106,.22); border-radius:100px; padding:.38rem 1rem; margin-bottom:2rem; animation:fadeUp .7s ease both; }
+  .bdot { width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pdot 2s ease-in-out infinite; }
+  @keyframes pdot{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.5);opacity:.6;}}
+
+  .hero h1 { font-family:var(--font-head); font-size:clamp(2.8rem,7vw,5.4rem); font-weight:800; line-height:1.05; letter-spacing:-.02em; margin-bottom:1.6rem; animation:fadeUp .7s .15s ease both; }
+  .grad { background:linear-gradient(100deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .ghost { -webkit-text-stroke:1.5px rgba(237,234,228,.14); -webkit-text-fill-color:transparent; }
+  .hero-sub { font-size:1.08rem; color:var(--lgray); max-width:540px; line-height:1.78; margin-bottom:2.5rem; animation:fadeUp .7s .28s ease both; }
+  .hero-sub strong { color:var(--white); font-weight:500; }
+  .hero-highlight { display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-head); font-weight:700; font-size:1.05rem; color:var(--white); background:rgba(168,149,106,.07); border:1px solid rgba(168,149,106,.25); border-left:3px solid var(--accent); border-radius:8px; padding:.9rem 1.4rem; margin-bottom:2.4rem; animation:fadeUp .7s .34s ease both; }
+  .hero-highlight span { color:var(--accent); }
+  .hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp .7s .4s ease both; }
+  .btn-p { font-family:var(--font-head); font-weight:700; font-size:.9rem; padding:.85rem 2rem; border-radius:10px; border:none; cursor:none; background:var(--accent); color:var(--bg); text-decoration:none; letter-spacing:.04em; transition:transform var(--tr),box-shadow var(--tr),opacity var(--tr); }
+  .btn-p:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(168,149,106,.3); opacity:.9; }
+  .btn-g { font-family:var(--font-head); font-weight:600; font-size:.9rem; padding:.85rem 2rem; border-radius:10px; cursor:none; border:1.5px solid rgba(168,149,106,.3); color:var(--accent); background:transparent; text-decoration:none; letter-spacing:.04em; transition:background var(--tr),border-color var(--tr),transform var(--tr); }
+  .btn-g:hover { background:rgba(168,149,106,.07); border-color:var(--accent); transform:translateY(-2px); }
+  .hero-stats { display:flex; gap:2.4rem; margin-top:3.2rem; flex-wrap:wrap; animation:fadeUp .7s .52s ease both; }
+  .stat { display:flex; flex-direction:column; gap:.32rem; max-width:180px; padding-left:1rem; border-left:2px solid rgba(168,149,106,.3); }
+  .stat-l { font-family:var(--font-head); font-size:.92rem; font-weight:700; color:var(--white); letter-spacing:.01em; }
+  .stat-sub { font-size:.74rem; color:var(--gray); line-height:1.5; }
+  .scroll-hint { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.5rem; font-size:.7rem; color:var(--gray); letter-spacing:.14em; text-transform:uppercase; animation:fadeUp 1s .8s ease both; }
+  .scroll-line { width:1px; height:38px; background:linear-gradient(var(--accent),transparent); animation:spulse 2s ease-in-out infinite; }
+  @keyframes spulse{0%,100%{opacity:.35;}50%{opacity:1;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+  .mq-wrap { overflow:hidden; padding:16px 0; background:rgba(168,149,106,.04); border-top:1px solid rgba(168,149,106,.1); border-bottom:1px solid rgba(168,149,106,.1); }
+  .mq-track { display:flex; white-space:nowrap; animation:mq 24s linear infinite; }
+  .mq-track span { font-family:var(--font-mono); font-size:.78rem; color:var(--gray); padding:0 2.5rem; border-right:1px solid rgba(168,149,106,.12); }
+  .mq-track span em { color:var(--accent); font-style:normal; }
+  @keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* MID CTA STRIP */
+  .cta-strip { padding:2.6rem 6vw; display:flex; align-items:center; justify-content:center; gap:1.6rem; flex-wrap:wrap; text-align:center; background:rgba(168,149,106,.035); border-top:1px solid rgba(168,149,106,.1); border-bottom:1px solid rgba(168,149,106,.1); }
+  .cta-strip p { font-family:var(--font-head); font-size:.95rem; font-weight:600; color:var(--white); }
+  .cta-strip a { flex-shrink:0; }
+  @media(max-width:600px){ .cta-strip{padding:2rem 5vw;flex-direction:column;} }
+
+  section { padding:96px 6vw; position:relative; z-index:1; }
+  .s-label { font-family:var(--font-mono); font-size:.7rem; color:var(--accent); letter-spacing:.18em; text-transform:uppercase; display:flex; align-items:center; gap:.7rem; margin-bottom:1rem; }
+  .s-label::before { content:''; flex:0 0 26px; height:1px; background:var(--accent); }
+  h2.s-title { font-family:var(--font-head); font-size:clamp(1.9rem,3.8vw,2.9rem); font-weight:800; line-height:1.1; margin-bottom:1.1rem; }
+  .s-desc { color:var(--lgray); max-width:510px; margin-bottom:3.5rem; line-height:1.78; }
+
+  /* SERVICES */
+  #services { background:var(--bg2); }
+  .svc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(295px,1fr)); gap:1.4rem; }
+  .svc-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:2rem; position:relative; overflow:hidden; transition:transform var(--tr),border-color var(--tr),box-shadow var(--tr); cursor:none; }
+  .svc-card::before { content:''; position:absolute; inset:0; opacity:0; background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(168,149,106,.06),transparent 65%); transition:opacity .4s; }
+  .svc-card:hover { transform:translateY(-5px); border-color:rgba(168,149,106,.3); box-shadow:0 18px 50px rgba(0,0,0,.5); }
+  .svc-card:hover::before { opacity:1; }
+  .svc-card.feat { border-color:rgba(168,149,106,.28); background:linear-gradient(135deg,rgba(168,149,106,.05),rgba(122,143,166,.04)); }
+  .feat-badge { display:inline-block; font-family:var(--font-mono); font-size:.63rem; background:var(--accent); color:var(--bg); padding:.22rem .7rem; border-radius:100px; letter-spacing:.07em; margin-bottom:1.2rem; }
+  .svc-icon { width:50px; height:50px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.4rem; position:relative; z-index:1; }
+  .ic-a { background:rgba(168,149,106,.1); box-shadow:0 0 18px rgba(168,149,106,.14); }
+  .ic-b { background:rgba(122,143,166,.1); box-shadow:0 0 18px rgba(122,143,166,.14); }
+  .ic-c { background:rgba(106,184,147,.08); box-shadow:0 0 18px rgba(106,184,147,.1); }
+  .svc-card h3 { font-family:var(--font-head); font-size:1.1rem; font-weight:700; margin-bottom:.7rem; line-height:1.3; }
+  .svc-card p { font-size:.88rem; color:var(--lgray); line-height:1.72; }
+  .tags { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:1.3rem; }
+  .tag { font-family:var(--font-mono); font-size:.68rem; padding:.28rem .72rem; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--gray); }
+  .tag-a { border-color:rgba(168,149,106,.25); color:var(--accent); background:rgba(168,149,106,.05); }
+  .tag-b { border-color:rgba(122,143,166,.25); color:#8ea8bf; background:rgba(122,143,166,.05); }
+
+  /* AUDIENCE */
+  #audience { background:var(--bg); padding-top:76px; }
+  .aud-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.2rem; }
+  .aud-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem 1.5rem; text-align:left; transition:transform var(--tr),border-color var(--tr),box-shadow var(--tr); cursor:none; }
+  .aud-card:hover { transform:translateY(-5px); border-color:rgba(168,149,106,.28); box-shadow:0 16px 40px rgba(0,0,0,.45); }
+  .aud-ic { width:42px; height:42px; border-radius:10px; background:rgba(168,149,106,.1); box-shadow:0 0 16px rgba(168,149,106,.12); display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:1.1rem; }
+  .aud-card h4 { font-family:var(--font-head); font-size:.98rem; font-weight:700; margin-bottom:.4rem; }
+  .aud-card p { font-size:.83rem; color:var(--lgray); line-height:1.6; }
+
+  /* WEBDEV */
+  #webdev { background:var(--bg); }
+
+  /* WORK */
+  #work { background:var(--bg); }
+  .work-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.6rem; }
+  .work-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform var(--tr),box-shadow var(--tr),border-color var(--tr); cursor:none; }
+  .work-card:hover { transform:translateY(-6px); box-shadow:0 22px 55px rgba(0,0,0,.55); border-color:rgba(168,149,106,.28); }
+  .work-img-wrap { overflow:hidden; position:relative; }
+  .work-img { width:100%; height:200px; object-fit:cover; display:block; filter:grayscale(15%) brightness(.9); transition:filter .5s ease,transform .5s ease; }
+  .work-card:hover .work-img { filter:grayscale(0%) brightness(1); transform:scale(1.04); }
+  .work-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(14,15,17,.8) 0%,transparent 55%); pointer-events:none; }
+  .work-type { position:absolute; top:12px; left:12px; font-family:var(--font-mono); font-size:.65rem; background:var(--accent); color:var(--bg); padding:.22rem .65rem; border-radius:100px; letter-spacing:.06em; }
+  .work-body { padding:1.4rem 1.6rem 1.8rem; }
+  .work-body h3 { font-family:var(--font-head); font-size:1rem; font-weight:700; margin-bottom:.5rem; }
+  .work-body p { font-size:.85rem; color:var(--lgray); line-height:1.68; margin-bottom:1rem; }
+  .work-result { display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-size:.72rem; color:var(--green); background:rgba(106,184,147,.08); border:1px solid rgba(106,184,147,.2); padding:.25rem .75rem; border-radius:100px; }
+  .cs-block { margin-bottom:1rem; }
+  .cs-block:last-of-type { margin-bottom:1.3rem; }
+  .cs-label { font-family:var(--font-mono); font-size:.66rem; color:var(--accent); text-transform:uppercase; letter-spacing:.1em; margin-bottom:.3rem; display:block; }
+  .cs-block p { font-size:.85rem; color:var(--lgray); line-height:1.65; margin:0; }
+  .cs-tech { display:flex; flex-wrap:wrap; gap:.4rem; }
+  .cs-tech span { font-family:var(--font-mono); font-size:.66rem; padding:.22rem .6rem; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--gray); }
+  .cs-btn { display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-head); font-size:.78rem; font-weight:700; color:var(--accent); text-decoration:none; margin-top:1.2rem; padding-top:1.1rem; border-top:1px solid var(--border); width:100%; }
+  .cs-btn:hover { color:var(--gold); }
+
+  /* PROCESS */
+  #process { background:var(--bg2); }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.4rem; counter-reset:step; }
+  .step { counter-increment:step; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.8rem; position:relative; overflow:hidden; transition:transform var(--tr),border-color var(--tr); }
+  .step:hover { transform:translateY(-4px); border-color:rgba(168,149,106,.25); }
+  .step::before { content:counter(step,'0'counter(step)); font-family:var(--font-head); font-size:5rem; font-weight:800; color:rgba(168,149,106,.05); position:absolute; top:-10px; right:10px; line-height:1; }
+  .step-icon { font-size:1.7rem; margin-bottom:1.1rem; }
+  .step h3 { font-family:var(--font-head); font-weight:700; margin-bottom:.55rem; }
+  .step p { font-size:.86rem; color:var(--lgray); line-height:1.65; }
+
+  /* WHY */
+  #why { background:var(--bg); }
+  .why-grid8 { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:1.2rem; }
+  .why-list { display:flex; flex-direction:column; gap:1.1rem; }
+  .why-item { display:flex; gap:1.1rem; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1.2rem 1.4rem; transition:border-color var(--tr),transform var(--tr); cursor:none; }
+  .why-item:hover { border-color:rgba(168,149,106,.28); transform:translateX(4px); }
+  .why-ico { font-size:1.3rem; flex-shrink:0; padding-top:.1rem; }
+  .why-item h4 { font-family:var(--font-head); font-size:.95rem; font-weight:700; margin-bottom:.28rem; }
+  .why-item p { font-size:.84rem; color:var(--lgray); line-height:1.6; }
+  .why-vis { background:linear-gradient(135deg,rgba(168,149,106,.05),rgba(122,143,166,.04)); border:1px solid rgba(168,149,106,.14); border-radius:var(--radius); padding:2.2rem; display:flex; flex-direction:column; gap:1.3rem; }
+  .pc { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.3rem; border-left:3px solid var(--accent); }
+  .pc.b2 { border-left-color:var(--red); }
+  .pc.b3 { border-left-color:var(--gold); }
+  .pc-t { font-family:var(--font-mono); font-size:.7rem; color:var(--accent); text-transform:uppercase; letter-spacing:.1em; margin-bottom:.38rem; }
+  .pc-t.r{color:var(--red);} .pc-t.g{color:var(--gold);}
+  .pc p { font-size:.84rem; color:var(--lgray); line-height:1.6; }
+
+  /* STACK */
+  #stack { background:var(--bg2); }
+  .tech-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.4rem; }
+  .tc { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:1.7rem; transition:border-color var(--tr); }
+  .tc:hover { border-color:rgba(168,149,106,.22); }
+  .tc-t { font-family:var(--font-head); font-size:.82rem; font-weight:700; color:var(--accent); margin-bottom:1.1rem; text-transform:uppercase; letter-spacing:.07em; }
+  .pills { display:flex; flex-wrap:wrap; gap:.55rem; }
+  .pill { font-family:var(--font-mono); font-size:.73rem; padding:.32rem .8rem; border-radius:8px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--lgray); transition:background var(--tr),color var(--tr); }
+  .pill:hover { background:rgba(168,149,106,.08); color:var(--accent); border-color:rgba(168,149,106,.25); }
+
+  /* PRICING */
+  #pricing { background:var(--bg); }
+  .price-scope-note { font-size:.82rem; color:var(--gray); max-width:640px; line-height:1.65; margin:-1.8rem 0 2.4rem; padding-left:1rem; border-left:2px solid rgba(168,149,106,.25); }
+  .price-group { margin-bottom:3.6rem; }
+  .price-group:last-child { margin-bottom:0; }
+  .price-group-title { font-family:var(--font-head); font-size:1.3rem; font-weight:800; margin-bottom:1.6rem; display:flex; align-items:center; gap:.6rem; }
+  .price-group-note { font-size:.84rem; color:var(--gray); margin:-1rem 0 1.6rem; }
+  .price-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(275px,1fr)); gap:1.4rem; }
+  .price-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:2rem 2rem 2.4rem; position:relative; transition:transform var(--tr),box-shadow var(--tr); cursor:none; }
+  .price-card.pop { border-color:rgba(168,149,106,.45); box-shadow:0 0 38px rgba(168,149,106,.1); }
+  .price-card:hover { transform:translateY(-6px); box-shadow:0 22px 55px rgba(0,0,0,.5); }
+  .pop-badge { position:absolute; top:-13px; left:50%; transform:translateX(-50%); font-family:var(--font-mono); font-size:.68rem; background:var(--accent); color:var(--bg); padding:.3rem 1rem; border-radius:100px; white-space:nowrap; letter-spacing:.06em; }
+  .p-name { font-family:var(--font-head); font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gray); margin-bottom:.7rem; }
+  .p-amt { font-family:var(--font-head); font-size:2.5rem; font-weight:800; line-height:1; margin-bottom:.38rem; color:var(--white); }
+  .p-amt sub { font-size:.95rem; font-weight:400; color:var(--gray); vertical-align:top; margin-top:.25rem; display:inline-block; }
+  .p-desc { font-size:.84rem; color:var(--gray); margin-bottom:1.7rem; }
+  .p-feats { list-style:none; display:flex; flex-direction:column; gap:.7rem; margin-bottom:1.8rem; }
+  .p-feats li { font-size:.87rem; color:var(--lgray); display:flex; align-items:flex-start; gap:.7rem; line-height:1.5; }
+  .p-feats li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+  .p-feats li.no::before { content:'✗'; color:var(--gray); }
+  .p-feats li.no { color:var(--gray); text-decoration:line-through; text-decoration-color:rgba(107,111,122,.6); }
+  .p-btn { display:block; text-align:center; font-family:var(--font-head); font-size:.87rem; font-weight:700; padding:.82rem; border-radius:10px; text-decoration:none; letter-spacing:.04em; transition:transform var(--tr),opacity var(--tr); cursor:none; }
+  .p-btn:hover { transform:translateY(-2px); opacity:.88; }
+  .p-btn-fill { background:var(--accent); color:var(--bg); }
+  .p-btn-out { border:1.5px solid rgba(168,149,106,.3); color:var(--accent); }
+
+  /* TESTI */
+  #testi { background:var(--bg2); }
+  .testi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1.8rem; max-width:1180px; margin:0 auto; }
+  .testi-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:2rem 1.9rem 1.9rem; position:relative; transition:transform var(--tr),border-color var(--tr),box-shadow var(--tr); overflow:hidden; }
+  .testi-card::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--accent),transparent); opacity:0; transition:opacity var(--tr); }
+  .testi-card:hover { transform:translateY(-5px); border-color:rgba(168,149,106,.28); box-shadow:0 20px 45px rgba(0,0,0,.4); }
+  .testi-card:hover::after { opacity:1; }
+  .testi-card::before { content:'"'; font-size:5rem; font-family:Georgia,serif; color:rgba(168,149,106,.1); position:absolute; top:10px; left:18px; line-height:1; }
+  .stars { color:var(--gold); font-size:.95rem; margin-bottom:.9rem; letter-spacing:.1em; }
+  .testi-txt { font-size:.88rem; color:var(--lgray); line-height:1.75; margin-bottom:1.5rem; font-style:italic; }
+  .testi-auth { display:flex; align-items:center; gap:.85rem; padding-top:1.2rem; border-top:1px solid var(--border); }
+  .testi-av { width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:.82rem; font-weight:700; color:var(--bg); flex-shrink:0; }
+  .testi-name { font-family:var(--font-head); font-size:.88rem; font-weight:700; }
+  .testi-role { font-size:.76rem; color:var(--gray); }
+
+  /* FAQ */
+  #faq { background:var(--bg); }
+  .faq-list { max-width:760px; }
+  .faq-item { background:var(--card); border:1px solid var(--border); border-radius:12px; margin-bottom:.9rem; overflow:hidden; transition:border-color var(--tr); }
+  .faq-item:hover { border-color:rgba(168,149,106,.25); }
+  .faq-q { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.3rem 1.6rem; cursor:none; font-family:var(--font-head); font-weight:700; font-size:.95rem; }
+  .faq-q .fq-ic { flex-shrink:0; width:22px; height:22px; border-radius:50%; border:1px solid rgba(168,149,106,.35); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:.85rem; transition:transform var(--tr); }
+  .faq-item.open .fq-ic { transform:rotate(45deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+  .faq-a p { padding:0 1.6rem 1.5rem; font-size:.87rem; color:var(--lgray); line-height:1.72; max-width:600px; }
+  .faq-item.open .faq-a { max-height:220px; }
+
+  /* CONTACT */
+  #contact { background:var(--bg); text-align:center; }
+  .contact-card { max-width:640px; margin:0 auto; background:linear-gradient(135deg,rgba(168,149,106,.05),rgba(122,143,166,.04)); border:1px solid rgba(168,149,106,.18); border-radius:20px; padding:3.2rem 2.8rem; position:relative; overflow:hidden; }
+  .contact-card::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%,rgba(168,149,106,.07),transparent 65%); pointer-events:none; }
+  .contact-card h3 { font-family:var(--font-head); font-size:clamp(1.6rem,3vw,2.1rem); font-weight:800; margin-bottom:.7rem; line-height:1.2; }
+  .contact-card > p { color:var(--lgray); margin-bottom:2.2rem; max-width:420px; margin-left:auto; margin-right:auto; }
+  .contact-btns { display:flex; flex-direction:column; align-items:center; gap:1rem; }
+  .c-btn { display:inline-flex; align-items:center; gap:.6rem; font-family:var(--font-head); font-weight:700; border-radius:12px; text-decoration:none; transition:transform var(--tr),box-shadow var(--tr); cursor:none; justify-content:center; }
+  .c-btn:hover { transform:translateY(-3px); }
+  .c-wa { background:#25D366; color:#fff; font-size:1.02rem; padding:1.15rem 2.8rem; min-width:340px; box-shadow:0 8px 30px rgba(37,211,102,.22); }
+  .c-wa:hover { box-shadow:0 14px 40px rgba(37,211,102,.38); }
+  .c-email { background:transparent; color:var(--lgray); font-size:.82rem; font-weight:600; padding:.7rem 1.6rem; min-width:auto; border:1px solid var(--border); }
+  .c-email:hover { color:var(--accent); border-color:rgba(168,149,106,.4); box-shadow:none; }
+  .c-note { font-size:.8rem; color:var(--gray); margin-top:1.5rem; }
+  .c-note strong { color:var(--green); }
+  .contact-social { display:flex; align-items:center; justify-content:center; gap:.7rem; margin-top:1.6rem; font-family:var(--font-mono); font-size:.78rem; }
+  .contact-social a { color:var(--lgray); text-decoration:none; transition:color var(--tr); }
+  .contact-social a:hover { color:var(--accent); }
+  .contact-social .cs-dot { color:var(--gray); }
+
+  footer { padding:4rem 6vw 2rem; border-top:1px solid var(--border); }
+  .foot-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2.5rem; max-width:1180px; margin:0 auto; padding-bottom:2.6rem; }
+  .foot-brand p { font-size:.83rem; color:var(--gray); line-height:1.65; margin-top:1rem; max-width:260px; }
+  .foot-col h5 { font-family:var(--font-head); font-size:.78rem; font-weight:700; color:var(--white); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1.1rem; }
+  .foot-col { display:flex; flex-direction:column; gap:.65rem; }
+  .foot-col a { font-size:.83rem; color:var(--gray); text-decoration:none; transition:color var(--tr); }
+  .foot-col a:hover { color:var(--accent); }
+  .foot-col a.wa:hover { color:#25D366; }
+  .foot-bottom { text-align:center; padding-top:2rem; border-top:1px solid var(--border); font-size:.78rem; color:var(--gray); max-width:1180px; margin:0 auto; }
+  @media(max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:500px){ .foot-grid{grid-template-columns:1fr;} }
+
+  /* CASE STUDY MODAL */
+  .cs-modal-backdrop { position:fixed; inset:0; z-index:200; background:rgba(10,11,13,.78); backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:5vh 5vw; }
+  .cs-modal-backdrop.open { display:flex; }
+  .cs-modal { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); max-width:620px; width:100%; max-height:88vh; overflow-y:auto; padding:2.6rem 2.4rem; position:relative; box-shadow:0 30px 80px rgba(0,0,0,.6); }
+  .cs-modal-close { position:absolute; top:1.2rem; right:1.2rem; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:transparent; color:var(--lgray); font-size:1rem; display:flex; align-items:center; justify-content:center; cursor:none; transition:border-color var(--tr),color var(--tr); }
+  .cs-modal-close:hover { border-color:var(--accent); color:var(--accent); }
+  .cs-modal-type { display:inline-block; font-family:var(--font-mono); font-size:.65rem; background:var(--accent); color:var(--bg); padding:.22rem .7rem; border-radius:100px; letter-spacing:.06em; margin-bottom:1rem; }
+  .cs-modal h3 { font-family:var(--font-head); font-size:1.5rem; font-weight:800; margin-bottom:1.4rem; line-height:1.2; padding-right:2rem; }
+  .cs-modal .cs-block { margin-bottom:1.3rem; }
+  .cs-modal .cs-label { font-family:var(--font-mono); font-size:.66rem; color:var(--accent); text-transform:uppercase; letter-spacing:.1em; margin-bottom:.35rem; display:block; }
+  .cs-modal .cs-block p { font-size:.9rem; color:var(--lgray); line-height:1.7; }
+  .cs-modal .cs-tech { display:flex; flex-wrap:wrap; gap:.4rem; }
+  .cs-modal .cs-tech span { font-family:var(--font-mono); font-size:.68rem; padding:.24rem .65rem; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--gray); }
+  .cs-modal-result { display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-mono); font-size:.74rem; color:var(--green); background:rgba(106,184,147,.08); border:1px solid rgba(106,184,147,.2); padding:.3rem .8rem; border-radius:100px; margin-bottom:1.6rem; }
+  .cs-view-btn { display:inline-block; margin-top:.7rem; font-family:var(--font-mono); font-size:.72rem; color:var(--gray); background:none; border:none; text-decoration:underline; text-underline-offset:3px; cursor:none; padding:0; transition:color var(--tr); }
+  .cs-view-btn:hover { color:var(--accent); }
+
+  .reveal { opacity:0; transform:translateY(36px); transition:opacity .65s ease,transform .65s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  @media(max-width:900px){.why-grid8{grid-template-columns:1fr 1fr;}}
+  @media(max-width:700px){
+    nav{padding:14px 5vw;} .nav-links{display:none;}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(14,15,17,.97);padding:2rem 5vw;border-bottom:1px solid var(--border);gap:1.5rem;}
+    .hamburger{display:flex;} section{padding:68px 5vw;} .hero{padding:100px 5vw 68px;} .hero-stats{gap:2rem;} .contact-card{padding:2.2rem 1.4rem;} .c-wa{min-width:unset;width:100%;} .c-email{width:auto;}
+  }
+</style>
+</head>
+<body>
+<div id="cd"></div><div id="cr"></div>
+
+<nav id="nav">
+  <a href="#" class="logo">Riju<span>Datta</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#webdev">Websites</a></li>
+    <li><a href="#saas">SaaS</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#why">Why Me</a></li>
+    <li><a href="#pricing">Investment</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="nav-cta">Let's Talk</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="bdot"></span>Available for new projects</div>
+    <h1>AI Agents, Websites &amp; SaaS<br><span class="grad">Built to Run</span><br><span class="ghost">Without You.</span></h1>
+    <p class="hero-sub">I'm <strong>Riju Datta</strong>, and I help founders, agencies, and growing businesses stop losing time and revenue to manual work. I design AI systems that answer, qualify, and follow up with customers automatically. I build websites engineered to convert visitors into leads. And I take SaaS ideas from a rough concept to a real, paying-customer-ready product. <strong>One specialist, three disciplines that overlap by design.</strong></p>
+    <p class="hero-highlight">Most businesses lose money to manual work quietly. <span>Automating it is a one-time decision.</span></p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20request%20a%20custom%20quote%20for%20a%20project." target="_blank" class="btn-p">Request a Custom Quote</a>
+      <a href="#work" class="btn-g">View My Work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-l">Direct Access</span><span class="stat-sub">No account managers, no middlemen</span></div>
+      <div class="stat"><span class="stat-l">Fixed Scope</span><span class="stat-sub">Price and timeline agreed before we start</span></div>
+      <div class="stat"><span class="stat-l">Full Ownership</span><span class="stat-sub">Source code and credentials, handed over</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll<div class="scroll-line"></div></div>
+</section>
+
+<section id="audience">
+  <div class="s-label">Who I Work With</div>
+  <h2 class="s-title reveal">Built for Teams Who Need<br><span class="grad">Results, Not Just Deliverables</span></h2>
+  <p class="s-desc reveal">Across industries, the projects that work best share one thing — a clear business problem and a willingness to fix it properly.</p>
+  <div class="aud-grid">
+    <div class="aud-card reveal"><div class="aud-ic">🚀</div><h4>Startups</h4><p>Fast, scoped builds that get an MVP or automation live before runway runs out.</p></div>
+    <div class="aud-card reveal"><div class="aud-ic">🏢</div><h4>Small Businesses</h4><p>Practical websites and automation that free up owner time without a big-agency price tag.</p></div>
+    <div class="aud-card reveal"><div class="aud-ic">🎓</div><h4>Educational Institutions</h4><p>Enrollment sites, inquiry automation, and portals that make admissions less manual.</p></div>
+    <div class="aud-card reveal"><div class="aud-ic">🏥</div><h4>Healthcare</h4><p>Appointment and intake automation that respects compliance while cutting front-desk load.</p></div>
+    <div class="aud-card reveal"><div class="aud-ic">🏠</div><h4>Real Estate</h4><p>Listing sites and lead-qualification agents that respond to inquiries the moment they arrive.</p></div>
+    <div class="aud-card reveal"><div class="aud-ic">💼</div><h4>Professional Services</h4><p>Client-facing sites and booking automation built around how consultancies and agencies actually operate.</p></div>
+  </div>
+</section>
+
+<div class="mq-wrap"><div class="mq-track">
+  <span>🤖 <em>AI Agents</em></span><span>⚡ <em>Business Automation</em></span><span>🧠 <em>LLM Integration</em></span><span>🌐 <em>Web Development</em></span><span>📦 <em>SaaS Development</em></span><span>🔗 <em>API Integration</em></span><span>📊 <em>Data Pipelines</em></span><span>💬 <em>AI Chatbots</em></span><span>🚀 <em>Fast Delivery</em></span>
+  <span>🤖 <em>AI Agents</em></span><span>⚡ <em>Business Automation</em></span><span>🧠 <em>LLM Integration</em></span><span>🌐 <em>Web Development</em></span><span>📦 <em>SaaS Development</em></span><span>🔗 <em>API Integration</em></span><span>📊 <em>Data Pipelines</em></span><span>💬 <em>AI Chatbots</em></span><span>🚀 <em>Fast Delivery</em></span>
+</div></div>
+
+<section id="services">
+  <div class="s-label">Core Discipline 01 — AI Automation</div>
+  <h2 class="s-title reveal">AI Systems That Handle<br><span class="grad">the Work You Shouldn't Have To</span></h2>
+  <p class="s-desc reveal">A focused set of AI builds — not a menu of buzzwords. Each one replaces a specific, repeatable cost with something that runs on its own.</p>
+  <div class="svc-grid">
+    <div class="svc-card feat reveal"><span class="feat-badge">★ MOST REQUESTED</span><div class="svc-icon ic-a">🤖</div><h3>Custom AI Agents</h3><p>Autonomous agents that qualify leads, answer support questions, or coordinate multi-step tasks across your tools — built for one job and built to do it without supervision. Multi-agent setups available for more complex workflows.</p><div class="tags"><span class="tag tag-a">Autonomous</span><span class="tag tag-a">Multi-step</span><span class="tag tag-a">24/7 Active</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-b">⚡</div><h3>Business Process Automation</h3><p>Your repetitive workflows — data entry, reporting, scheduling, content pipelines — mapped once and handed to AI permanently. Delivered to your inbox or Slack, no manual step left in the loop.</p><div class="tags"><span class="tag tag-b">n8n</span><span class="tag tag-b">Make.com</span><span class="tag tag-b">Zapier</span><span class="tag">Python</span></div></div>
+    <div class="svc-card feat reveal"><span class="feat-badge">⚡ HIGH ROI</span><div class="svc-icon ic-a">💬</div><h3>LLM Chatbots & Sales Agents</h3><p>Agents trained on your exact business context that qualify leads, handle objections, and book appointments — not a scripted FAQ widget, a system that can actually close.</p><div class="tags"><span class="tag tag-a">Lead Gen</span><span class="tag tag-a">Sales Closing</span><span class="tag tag-a">GPT-4o</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-c">🔗</div><h3>AI API Integrations</h3><p>AI layered directly into the CRM, ERP, or tools you already run your business on — so your team gets smarter workflows without ripping out systems that already work.</p><div class="tags"><span class="tag">OpenAI</span><span class="tag">Claude</span><span class="tag">Gemini</span><span class="tag">REST</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-c">🎙️</div><h3>AI Voice Agents</h3><p>Voice agents that answer calls, take orders, and book appointments around the clock — no hold music, no missed calls after hours.</p><div class="tags"><span class="tag tag-b">Vapi</span><span class="tag tag-b">ElevenLabs</span><span class="tag">Phone / IVR</span></div></div>
+  </div>
+</section>
+
+<div class="cta-strip"><p>Not sure which AI solution fits your business?</p><a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20talk%20through%20which%20AI%20solution%20fits%20my%20business." target="_blank" class="btn-p">Let's Talk</a></div>
+
+<section id="pricing">
+  <div class="s-label">Investment — AI Automation</div>
+  <h2 class="s-title reveal">Starting Points.<br><span class="grad">Scoped to Fit.</span></h2>
+  <p class="s-desc reveal">Every package includes full source code, documentation, and post-launch support. Multi-agent systems and ongoing automation programs are scoped individually — book a call for a custom quote.</p>
+  <p class="price-scope-note reveal">Every business has unique requirements. The options below are starting points. Larger projects receive a tailored proposal based on scope, features, integrations, and business goals.</p>
+
+  <div class="price-group">
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="p-name">Starter</div><div class="p-amt"><sub>$</sub>299</div>
+        <div class="p-desc">Perfect for a single automation or simple chatbot.</div>
+        <ul class="p-feats"><li>1 AI Chatbot or simple automation</li><li>Integration with 1 platform</li><li>3-day delivery</li><li>3 revision rounds</li><li>Basic documentation</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20Starter%20AI%20Agent%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card pop reveal">
+        <div class="pop-badge">⭐ Most Popular</div>
+        <div class="p-name">Professional</div><div class="p-amt"><sub>$</sub>599</div>
+        <div class="p-desc">Full AI agent with business logic and integrations.</div>
+        <ul class="p-feats"><li>Custom AI Agent — full build</li><li>Up to 5 platform integrations</li><li>5–7 day delivery</li><li>Unlimited revisions</li><li>Full documentation + handover call</li><li>7 days post-launch support</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20Professional%20AI%20Agent%20Package!" target="_blank" class="p-btn p-btn-fill">Discuss Your Project →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">Enterprise</div><div class="p-amt">Custom</div>
+        <div class="p-desc">Multi-agent systems and full automation ecosystems.</div>
+        <ul class="p-feats"><li>Multi-agent orchestration system</li><li>Unlimited integrations</li><li>Priority delivery</li><li>Unlimited revisions</li><li>Full documentation + training</li><li>30 days post-launch support</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20an%20Enterprise%20AI%20solution!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="webdev">
+  <div class="s-label">Core Discipline 02 — Web Development</div>
+  <h2 class="s-title reveal">Websites Built to <span class="grad">Convert</span><br>Not Just Look Good</h2>
+  <p class="s-desc reveal">Every project ships mobile-first, fast, and SEO-ready by default — with technical SEO, uptime monitoring, and ongoing maintenance included as standard, not upsold as extras.</p>
+  <div class="svc-grid">
+    <div class="svc-card reveal"><div class="svc-icon ic-b">🖥️</div><h3>Business & Portfolio Websites</h3><p>Custom-coded, mobile-first websites for businesses, professionals, and personal brands — built to represent you exactly the way you want to be seen online.</p><div class="tags"><span class="tag tag-b">Responsive</span><span class="tag tag-b">SEO-Ready</span><span class="tag">Fast Load</span></div></div>
+    <div class="svc-card feat reveal"><span class="feat-badge">⚡ HIGH DEMAND</span><div class="svc-icon ic-a">🛒</div><h3>E-Commerce Stores</h3><p>Complete online stores with product catalogs, secure checkout, and payment gateway integration — ready to start selling from day one.</p><div class="tags"><span class="tag tag-a">Stripe / PayPal</span><span class="tag tag-a">Inventory</span><span class="tag tag-a">Mobile Checkout</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-c">🎯</div><h3>Landing Pages & Sales Funnels</h3><p>High-converting single-page sites engineered around one goal — turning traffic into leads, signups, or sales, with copy and design working together.</p><div class="tags"><span class="tag">Conversion-Focused</span><span class="tag">Fast Turnaround</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-b">🧩</div><h3>Web Applications & Dashboards</h3><p>Custom web apps, client portals, and internal dashboards built around exactly how your team works — secure logins, live data, and workflows that replace spreadsheets and back-and-forth emails.</p><div class="tags"><span class="tag tag-b">React</span><span class="tag tag-b">Next.js</span><span class="tag">Full-Stack</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-c">⚙️</div><h3>Redesign & Speed Optimization</h3><p>Slow or outdated site rebuilt from the ground up — faster load times, modern design, and mobile optimization, without losing existing SEO rankings.</p><div class="tags"><span class="tag">Performance</span><span class="tag">SEO Migration</span></div></div>
+  </div>
+</section>
+
+<section id="pricing-webdev">
+  <div class="s-label">Investment — Web Development</div>
+  <h2 class="s-title reveal">Starting Points.<br><span class="grad">Scoped to Fit.</span></h2>
+  <p class="s-desc reveal">Every package includes full source code, documentation, and post-launch support. Larger builds — web apps, marketplaces, and enterprise platforms — are scoped and quoted individually.</p>
+  <p class="price-scope-note reveal">Every business has unique requirements. The options below are starting points. Larger projects receive a tailored proposal based on scope, features, integrations, and business goals.</p>
+
+  <div class="price-group">
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="p-name">Landing Page</div><div class="p-amt"><sub>$</sub>249</div>
+        <div class="p-desc">A single high-converting page to launch fast.</div>
+        <ul class="p-feats"><li>1 responsive landing page (up to 5 sections)</li><li>Mobile-first design</li><li>Contact form integration</li><li>Basic on-page SEO</li><li>1-day delivery</li><li>2 revision rounds</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24249%20Landing%20Page%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">Starter Website</div><div class="p-amt"><sub>$</sub>499</div>
+        <div class="p-desc">A complete small-business website, done right.</div>
+        <ul class="p-feats"><li>Up to 5-page responsive website</li><li>Custom design — no templates</li><li>Contact form + Google Maps</li><li>Basic SEO setup</li><li>2-day delivery</li><li>3 revision rounds</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24499%20Starter%20Website%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card pop reveal">
+        <div class="pop-badge">⭐ Most Popular</div>
+        <div class="p-name">Business Website</div><div class="p-amt"><sub>$</sub>999</div>
+        <div class="p-desc">A premium site built to rank, load fast, and convert.</div>
+        <ul class="p-feats"><li>Up to 10-page custom website</li><li>CMS / blog integration</li><li>On-page SEO + speed optimization</li><li>Smart contact/chat widget</li><li>3–4 day delivery</li><li>Unlimited revisions</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24999%20Business%20Website%20Package!" target="_blank" class="p-btn p-btn-fill">Discuss Your Project →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">E-Commerce Store</div><div class="p-amt"><sub>$</sub>1,499</div>
+        <div class="p-desc">A full online store, ready to take orders.</div>
+        <ul class="p-feats"><li>Full online store — unlimited products</li><li>Secure payment gateway integration</li><li>Order & inventory management</li><li>Custom checkout experience</li><li>5-day delivery</li><li>Unlimited revisions + training</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%241499%20E-Commerce%20Store%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card pop reveal">
+        <div class="pop-badge">✦ Most Flexible</div>
+        <div class="p-name">Enterprise Website Solutions</div><div class="p-amt" style="font-size:1.3rem;">Custom Solution</div>
+        <div class="p-desc">For large businesses that need a custom platform, not a template — built as a long-term partnership.</div>
+        <ul class="p-feats"><li>Built for large businesses & growing teams</li><li>Fully custom platform architecture</li><li>Scalable infrastructure that grows with you</li><li>Long-term partnership & ongoing support</li><li>Unlimited flexibility — scoped entirely around you</li><li>Dedicated post-launch support window</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%0AI%27m%20interested%20in%20your%20Enterprise%20Website%20Development%20service.%0AI%27d%20like%20to%20discuss%20my%20project%20and%20receive%20a%20custom%20quote.%0APlease%20let%20me%20know%20your%20availability." target="_blank" class="p-btn p-btn-fill">Let's Talk →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="saas">
+  <div class="s-label">Core Discipline 03 — SaaS Development</div>
+  <h2 class="s-title reveal">SaaS Products Built to <span class="grad">Launch</span><br>and Actually Hold Up</h2>
+  <p class="s-desc reveal">From a rough idea to a real, paying-customer-ready platform — multi-tenant architecture, subscription billing, and the AI features that make the product stand out, without a bloated agency process or a six-month timeline.</p>
+  <div class="svc-grid">
+    <div class="svc-card feat reveal"><span class="feat-badge">★ MOST POPULAR</span><div class="svc-icon ic-a">🧱</div><h3>Custom SaaS MVP Development</h3><p>Core features scoped tight, the rest cut, and a real MVP in your users' hands fast enough to start collecting feedback within weeks — API-first backend included, so mobile apps or integrations later aren't a rewrite.</p><div class="tags"><span class="tag tag-a">MVP</span><span class="tag tag-a">Fast Launch</span><span class="tag tag-a">Full-Stack</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-b">🏢</div><h3>Multi-Tenant Architecture</h3><p>Proper multi-tenant data isolation and role-based access from day one, so the product doesn't hit a rebuild wall the moment you sign your 50th customer.</p><div class="tags"><span class="tag tag-b">Multi-Tenant</span><span class="tag tag-b">Role-Based Access</span><span class="tag">Scalable DB</span></div></div>
+    <div class="svc-card feat reveal"><span class="feat-badge">⚡ HIGH DEMAND</span><div class="svc-icon ic-a">💳</div><h3>Subscription Billing & Payments</h3><p>Recurring revenue that runs itself — plans, upgrades, trials, failed-payment recovery, and invoicing handled automatically, so payments are never something you chase manually.</p><div class="tags"><span class="tag tag-a">Stripe</span><span class="tag tag-a">Paddle</span><span class="tag tag-a">Recurring Billing</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-c">📊</div><h3>Dashboards, Analytics & Onboarding</h3><p>Clean dashboards that show usage and revenue without noise, paired with an onboarding flow designed to get new users to their "aha moment" fast.</p><div class="tags"><span class="tag">Real-Time Data</span><span class="tag">Activation</span></div></div>
+    <div class="svc-card reveal"><div class="svc-icon ic-a">🤖</div><h3>AI Features Built Into Your Product</h3><p>The differentiator most competitors skip — smart search, AI summaries, or an in-app copilot baked directly into the product's core workflow.</p><div class="tags"><span class="tag tag-a">OpenAI</span><span class="tag tag-a">Claude</span><span class="tag">In-App AI</span></div></div>
+  </div>
+</section>
+
+<section id="pricing-saas">
+  <div class="s-label">Investment — SaaS Development</div>
+  <h2 class="s-title reveal">Starting Points.<br><span class="grad">Scoped to Fit.</span></h2>
+  <p class="s-desc reveal">From validating an idea to a fully built, billing-ready platform — every package includes full source code and documentation.</p>
+  <p class="price-scope-note reveal">Every business has unique requirements. The options below are starting points. Larger projects receive a tailored proposal based on scope, features, integrations, and business goals.</p>
+
+  <div class="price-group">
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="p-name">Idea Validator</div><div class="p-amt"><sub>$</sub>299</div>
+        <div class="p-desc">Test demand before you build a single feature.</div>
+        <ul class="p-feats"><li>1 landing page built to validate your idea</li><li>Waitlist / email capture with analytics</li><li>Basic on-page SEO</li><li>3-day delivery</li><li>2 revision rounds</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24299%20SaaS%20Idea%20Validator%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">Starter SaaS</div><div class="p-amt"><sub>$</sub>499</div>
+        <div class="p-desc">A working single-tenant product you can start showing users.</div>
+        <ul class="p-feats"><li>User authentication + core dashboard</li><li>1 core feature module built out</li><li>Stripe test-mode integration</li><li>5-day delivery</li><li>3 revision rounds</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24499%20Starter%20SaaS%20Package!" target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+      <div class="price-card pop reveal">
+        <div class="pop-badge">⭐ Most Popular</div>
+        <div class="p-name">Growth SaaS</div><div class="p-amt"><sub>$</sub>999</div>
+        <div class="p-desc">Multi-tenant, billing-ready, and built to onboard real customers.</div>
+        <ul class="p-feats"><li>Multi-tenant architecture + user roles</li><li>Live subscription billing (Stripe/Paddle)</li><li>Admin panel + up to 3 feature modules</li><li>7-day delivery</li><li>Unlimited revisions</li><li>30 days post-launch support</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27m%20interested%20in%20the%20%24999%20Growth%20SaaS%20Package!" target="_blank" class="p-btn p-btn-fill">Discuss Your Project →</a>
+      </div>
+      <div class="price-card reveal">
+        <span class="feat-badge">✦ Custom Solution</span>
+        <div class="p-name">Lifetime Partner</div><div class="p-amt" style="font-size:1.05rem;">Tailored for Your Business</div>
+        <div class="p-desc">I stay on as your SaaS's dev partner, indefinitely — scoped and quoted around your product.</div>
+        <ul class="p-feats"><li>Everything in Growth SaaS</li><li>No recurring retainer — one-time partnership fee</li><li>Ongoing feature builds as your product grows</li><li>Priority support & response time</li><li>Infrastructure scaling handled as you grow</li><li>Direct line to me for the life of the product</li></ul>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%0AI%27m%20interested%20in%20your%20Custom%20SaaS%20Development%20service.%0AI%27d%20like%20to%20discuss%20my%20project%20and%20receive%20a%20custom%20quote.%0APlease%20let%20me%20know%20your%20availability." target="_blank" class="p-btn p-btn-out">Let's Talk →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="s-label">Case Studies</div>
+  <h2 class="s-title reveal">Real Projects. <span class="grad">Real Results.</span></h2>
+  <p class="s-desc reveal">A selection of AI agents, websites, and SaaS builds — each shown with the problem it solved, not just a screenshot.</p>
+  <div class="work-grid">
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80" alt="AI lead qualification agent dashboard" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">AI Agent</span>
+      </div>
+      <div class="work-body">
+        <h3>AI Lead Qualification Agent</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>A SaaS company's sales team was manually screening every inbound lead, delaying response time and losing hot leads in the backlog.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>An always-on agent that scores, tags, and routes leads the moment they arrive, with no human step in between.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>OpenAI</span><span>n8n</span><span>HubSpot</span></div></div>
+        <span class="work-result">📈 &nbsp;Higher lead-to-call conversion</span><br>
+        <button class="cs-view-btn" data-cs="1">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20AI%20agent%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=700&q=80" alt="E-commerce AI support chatbot" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">LLM Chatbot</span>
+      </div>
+      <div class="work-body">
+        <h3>E-Commerce Support Agent</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>Support tickets for returns and order status were piling up faster than a small team could answer them, especially outside business hours.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>A GPT-4o powered agent trained on the store's policies that resolves tickets, processes returns, and answers FAQs autonomously.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>GPT-4o</span><span>Shopify API</span><span>Zendesk</span></div></div>
+        <span class="work-result">⚡ &nbsp;Majority of tickets resolved without a human</span><br>
+        <button class="cs-view-btn" data-cs="2">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20support%20agent%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Outbound AI sales agent workflow" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">AI Agent</span>
+      </div>
+      <div class="work-body">
+        <h3>Outbound AI Sales Agent</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>A founder was spending hours a week researching prospects and writing outreach by hand, with inconsistent follow-up.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>A multi-step agent that researches each prospect, personalizes outreach, follows up on schedule, and books meetings directly to the calendar.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>Apify</span><span>Instantly.ai</span><span>OpenAI</span></div></div>
+        <span class="work-result">📅 &nbsp;More qualified meetings booked per week</span><br>
+        <button class="cs-view-btn" data-cs="3">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20outreach%20agent%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&q=80" alt="SaaS landing page with embedded AI chat" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">Web Dev</span>
+      </div>
+      <div class="work-body">
+        <h3>AI-Powered SaaS Landing Page</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>A SaaS product's marketing site was slow, generic, and gave visitors no reason to sign up on the first visit.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>A fast, conversion-focused landing page in Next.js with an embedded AI chat widget for real-time lead capture.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>Next.js</span><span>Tailwind</span><span>OpenAI</span></div></div>
+        <span class="work-result">🎯 &nbsp;Measurable lift in signup rate</span><br>
+        <button class="cs-view-btn" data-cs="4">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20landing%20page%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80" alt="Multi-tenant SaaS product dashboard" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">SaaS</span>
+      </div>
+      <div class="work-body">
+        <h3>Multi-Tenant SaaS MVP</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>A founder had a validated idea but no product — and needed something real in front of users without a six-month build cycle.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>A live multi-tenant product with authentication, role-based dashboards, and Stripe billing wired in from day one.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>Next.js</span><span>Supabase</span><span>Stripe</span></div></div>
+        <span class="work-result">🚀 &nbsp;Live with paying customers within weeks</span><br>
+        <button class="cs-view-btn" data-cs="5">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20SaaS%20MVP%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="work-img-wrap">
+        <img class="work-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="E-commerce store rebuild" loading="lazy">
+        <div class="work-overlay"></div><span class="work-type">Web Dev</span>
+      </div>
+      <div class="work-body">
+        <h3>E-Commerce Store Rebuild</h3>
+        <div class="cs-block"><span class="cs-label">Problem</span><p>A boutique's old store was slow on mobile and losing customers at checkout.</p></div>
+        <div class="cs-block"><span class="cs-label">Solution</span><p>A full rebuild with a new checkout flow, cleaner product catalog, and a mobile-first design.</p></div>
+        <div class="cs-block"><span class="cs-label">Stack</span><div class="cs-tech"><span>Next.js</span><span>Stripe</span><span>PostgreSQL</span></div></div>
+        <span class="work-result">🛒 &nbsp;More completed checkouts on mobile</span><br>
+        <button class="cs-view-btn" data-cs="6">View Full Case Study →</button>
+        <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20e-commerce%20project." target="_blank" class="cs-btn">Discuss Your Project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip"><p>Have a similar project in mind?</p><a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20project%20similar%20to%20one%20in%20your%20portfolio." target="_blank" class="btn-p">Discuss Your Project</a></div>
+
+<section id="process">
+  <div class="s-label">How I Work</div>
+  <h2 class="s-title reveal">From Idea to Running Agent<br><span class="grad">in Days, Not Months</span></h2>
+  <p class="s-desc reveal">A streamlined process built for speed without sacrificing quality.</p>
+  <div class="steps">
+    <div class="step reveal"><div class="step-icon">🎯</div><h3>Discovery Call</h3><p>We map your workflow bottlenecks, define agent goals, and set clear success metrics. Free, zero commitment.</p></div>
+    <div class="step reveal"><div class="step-icon">🏗️</div><h3>Architecture Design</h3><p>I design the agent's decision tree, integrations, and tech stack — tailored precisely to your use case.</p></div>
+    <div class="step reveal"><div class="step-icon">⚡</div><h3>Rapid Build</h3><p>Prototype in 48 hours. Full production agent completed in 3–7 days depending on complexity.</p></div>
+    <div class="step reveal"><div class="step-icon">🧪</div><h3>Test & Refine</h3><p>Unlimited revisions until the agent performs exactly as specified. You approve before we ship.</p></div>
+    <div class="step reveal"><div class="step-icon">🚀</div><h3>Deploy & Hand Over</h3><p>Full source code, documentation, and 7-day post-launch support. You own everything completely.</p></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="s-label">Why Clients Choose Me</div>
+  <h2 class="s-title reveal">The Difference Between<br><span class="grad">Results</span> and Regret</h2>
+  <p class="s-desc reveal">Not a list of adjectives — this is how projects are actually run, from the first message to the last handover.</p>
+  <div class="why-grid8">
+    <div class="why-item reveal"><span class="why-ico">💬</span><div><h4>Fast Communication</h4><p>You're talking to the person doing the work, not an account manager relaying messages. Questions get answered same-day.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">🧑‍💻</span><div><h4>Clean, Maintainable Code</h4><p>Structured, documented, and built so another developer — or you — can pick it up years later without guessing.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">🎯</span><div><h4>Business-Focused Solutions</h4><p>Every build is judged by what it does for revenue, time, or cost — not by how many features it technically has.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">🏗️</span><div><h4>Scalable Architecture</h4><p>Built to handle your 50th customer the same way it handles your 5th, so growth doesn't force a rebuild.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">🤝</span><div><h4>Long-Term Support</h4><p>Post-launch support is built into every package, and ongoing partnerships are available once you're live.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">💵</span><div><h4>Transparent Pricing</h4><p>Fixed pricing on defined scopes, and an honest custom quote for anything larger — no invoices that creep upward.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">📦</span><div><h4>Reliable Delivery</h4><p>Timelines are agreed before work starts and communicated clearly if scope changes — no disappearing for weeks.</p></div></div>
+    <div class="why-item reveal"><span class="why-ico">⚙️</span><div><h4>Modern Technologies</h4><p>Current, production-grade tools — not legacy stacks or frameworks chosen out of habit.</p></div></div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="s-label">Trusted Technologies</div>
+  <h2 class="s-title reveal">Production-Grade Tools.<br><span class="grad">No Toy Frameworks.</span></h2>
+  <p class="s-desc reveal">The same technologies used by well-funded product teams — chosen for reliability, not novelty.</p>
+  <div class="tech-grid">
+    <div class="tc reveal"><div class="tc-t">🧠 AI Models</div><div class="pills"><span class="pill">OpenAI</span><span class="pill">Claude</span><span class="pill">Gemini</span><span class="pill">Llama 3</span></div></div>
+    <div class="tc reveal"><div class="tc-t">🤖 Agent Frameworks</div><div class="pills"><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">CrewAI</span><span class="pill">AutoGen</span></div></div>
+    <div class="tc reveal"><div class="tc-t">⚡ Automation</div><div class="pills"><span class="pill">n8n</span><span class="pill">Make.com</span><span class="pill">Zapier</span></div></div>
+    <div class="tc reveal"><div class="tc-t">🗄️ Data & Backend</div><div class="pills"><span class="pill">Supabase</span><span class="pill">Firebase</span><span class="pill">PostgreSQL</span><span class="pill">Redis</span></div></div>
+    <div class="tc reveal"><div class="tc-t">🌐 Web & App</div><div class="pills"><span class="pill">React</span><span class="pill">Next.js</span><span class="pill">Node.js</span><span class="pill">Flutter</span></div></div>
+    <div class="tc reveal"><div class="tc-t">☁️ Infrastructure</div><div class="pills"><span class="pill">Stripe</span><span class="pill">Vercel</span><span class="pill">Docker</span><span class="pill">GitHub</span></div></div>
+  </div>
+</section>
+
+<section id="testi">
+  <div class="s-label">Social Proof</div>
+  <h2 class="s-title reveal">What Clients Say<br><span class="grad">After Working With Me</span></h2>
+  <p class="s-desc reveal">A few of the strongest results, straight from the people who hired me.</p>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><p class="testi-txt">Riju built an AI agent that handles our entire lead qualification process. We went from hours a day on manual outreach to zero, and our conversion rate went up noticeably.</p><div class="testi-auth"><div class="testi-av">SM</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Marketing Director, SaaS Company</div></div></div></div>
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><p class="testi-txt">Our new website looks stunning and loads almost instantly. Since launch we've seen a real, noticeable jump in inbound inquiries. Riju nailed the brief on the first try.</p><div class="testi-auth"><div class="testi-av">DR</div><div><div class="testi-name">Daniel R.</div><div class="testi-role">Owner, Real Estate Agency</div></div></div></div>
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><p class="testi-txt">I came to Riju with a rough idea scribbled in a notes app. Weeks later I had a real product with paying users and Stripe running in the background. Still can't believe how smooth it was.</p><div class="testi-auth"><div class="testi-av">RS</div><div><div class="testi-name">Ravi S.</div><div class="testi-role">Founder, B2B SaaS Startup</div></div></div></div>
+  </div>
+</section>
+
+<div class="cta-strip"><p>Ready to get results like these for your business?</p><a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20request%20a%20custom%20quote%20for%20my%20project." target="_blank" class="btn-p">Request a Custom Quote</a></div>
+
+<section id="faq">
+  <div class="s-label">Questions</div>
+  <h2 class="s-title reveal">Before You Reach Out.</h2>
+  <p class="s-desc reveal">The questions every serious client asks first — answered up front.</p>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>How long does a project take?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>Fixed-scope projects (landing pages, agents, starter builds) ship in days. Larger web apps, SaaS MVPs, and enterprise platforms are scoped with a clear timeline before work starts — never an open-ended estimate.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>Do I own the source code?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>Yes, completely. Full source code, documentation, and credentials are handed over at delivery. There's no lock-in and no dependency on me to keep it running.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>Do you provide hosting?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>I set up hosting and deployment (Vercel, AWS, or your preferred provider) as part of delivery. Ongoing hosting costs are billed directly by the provider — I don't mark them up.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>Do you offer maintenance?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>Every package includes a post-launch support window. Beyond that, ongoing maintenance and feature work can be arranged as a standing partnership — no fixed retainer required unless you want one.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>Can you redesign or rebuild an existing system?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>Yes. Redesigns, migrations, and rebuilding on top of an existing codebase are common — I review what's there first and scope around it rather than starting from a blank slate unnecessarily.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q"><span>How do payments work?</span><span class="fq-ic">+</span></div>
+      <div class="faq-a"><p>Fixed-price packages are split into a deposit and a delivery payment. Custom-quoted work is broken into milestones agreed on during the discovery call, so you're never paying in full upfront for an undefined scope.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-card reveal">
+    <div class="s-label" style="justify-content:center;margin-bottom:1.4rem;"><span style="color:var(--green);font-size:.78rem;">● Currently accepting a limited number of new projects</span></div>
+    <h3>Let's Build Something<br><span class="grad">That Drives Real Results</span></h3>
+    <p>Whether you're looking to automate your business with AI, build a modern high-performing website, or develop a custom SaaS platform, I'm here to help. Every project starts with understanding your goals before recommending the right solution. Reach out today for a free consultation and a custom quote.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="c-btn c-wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        &nbsp;Let's Talk
+      </a>
+      <a href="mailto:rijudattaforbusiness@gmail.com?subject=Project%20Inquiry%20from%20Portfolio&body=Hi%20Riju%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." class="c-btn c-email">✉ &nbsp;Email Me</a>
+    </div>
+    <p class="c-note"><strong>⚡ Fast reply guaranteed</strong> &nbsp;·&nbsp; Free 30-min strategy call included</p>
+  </div>
+</section>
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a href="#" class="logo">Riju<span>Datta</span></a>
+      <p>AI Automation, Web Development & SaaS Engineering for founders, agencies, and growing businesses.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Navigate</h5>
+      <a href="#services">Services</a><a href="#work">Case Studies</a><a href="#pricing">Investment</a><a href="#faq">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h5>Services</h5>
+      <a href="#services">AI Automation & Agents</a><a href="#webdev">Website Development</a><a href="#saas">SaaS Development</a>
+    </div>
+    <div class="foot-col">
+      <h5>Connect</h5>
+      <a href="mailto:rijudattaforbusiness@gmail.com">Email</a>
+      <a href="https://wa.me/8801576458003?text=Hi%20Riju!" target="_blank" class="wa">WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Riju Datta — AI Agents, Web Development &amp; SaaS. All rights reserved.</div>
+</footer>
+
+<div class="cs-modal-backdrop" id="csModalBackdrop">
+  <div class="cs-modal">
+    <button class="cs-modal-close" id="csModalClose" aria-label="Close case study">✕</button>
+    <span class="cs-modal-type" id="csmType"></span>
+    <h3 id="csmTitle"></h3>
+    <div class="cs-block"><span class="cs-label">Overview</span><p id="csmOverview"></p></div>
+    <div class="cs-block"><span class="cs-label">Challenge</span><p id="csmChallenge"></p></div>
+    <div class="cs-block"><span class="cs-label">Solution</span><p id="csmSolution"></p></div>
+    <div class="cs-block"><span class="cs-label">Technologies Used</span><div class="cs-tech" id="csmTech"></div></div>
+    <div class="cs-block"><span class="cs-label">Timeline</span><p id="csmTimeline"></p></div>
+    <div class="cs-block"><span class="cs-label">Business Outcome</span><p id="csmOutcome"></p></div>
+    <div class="cs-modal-result" id="csmResult"></div>
+    <a href="#" target="_blank" class="cs-btn" id="csmCta">Discuss Your Project →</a>
+  </div>
+</div>
+
+<script>
+  const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cd.style.cssText=`left:${mx}px;top:${my}px`;cr.style.cssText=`left:${rx}px;top:${ry}px`;requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,.svc-card,.why-item,.step,.testi-card,.price-card,.work-card,.faq-q,.cs-btn,.aud-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cr.style.width='50px';cr.style.height='50px';cr.style.borderColor='var(--accent)';});
+    el.addEventListener('mouseleave',()=>{cr.style.width='34px';cr.style.height='34px';cr.style.borderColor='rgba(168,149,106,.4)';});
+  });
+  document.querySelectorAll('.svc-card').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');});
+  });
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+  const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*75);obs.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      const wasOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>o.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+  const navEl=document.getElementById('nav');
+  window.addEventListener('scroll',()=>{navEl.style.borderBottomColor=window.scrollY>50?'rgba(168,149,106,.18)':'rgba(168,149,106,.1)';});
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();document.getElementById('navLinks').classList.remove('open');t.scrollIntoView({behavior:'smooth'});}});
+  });
+
+  const caseStudies = {
+    1:{type:'AI Agent',title:'AI Lead Qualification Agent',overview:"A SaaS sales team needed inbound leads scored and routed the instant they arrived, instead of sitting unread in a shared inbox.",challenge:"A SaaS company's sales team was manually screening every inbound lead, delaying response time and losing hot leads in the backlog.",solution:"An always-on agent that scores, tags, and routes leads the moment they arrive, with no human step in between.",tech:['OpenAI','n8n','HubSpot'],timeline:'4 days from kickoff to a live agent.',outcome:"Lead response time dropped from hours to seconds, and lead-to-call conversion rose noticeably within the first month.",result:'📈 Higher lead-to-call conversion',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20AI%20agent%20project.'},
+    2:{type:'LLM Chatbot',title:'E-Commerce Support Agent',overview:"An online store's support queue was growing faster than the team could keep up, especially outside business hours.",challenge:"Support tickets for returns and order status were piling up faster than a small team could answer them, especially outside business hours.",solution:"A GPT-4o powered agent trained on the store's policies that resolves tickets, processes returns, and answers FAQs autonomously.",tech:['GPT-4o','Shopify API','Zendesk'],timeline:'6 days from scoping call to launch.',outcome:"The majority of return and order-status tickets now resolve without a human touching them, freeing the team to focus on complex cases.",result:'⚡ Majority of tickets resolved without a human',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20support%20agent%20project.'},
+    3:{type:'AI Agent',title:'Outbound AI Sales Agent',overview:"A solo founder was losing hours every week to manual prospect research and inconsistent outreach follow-up.",challenge:"A founder was spending hours a week researching prospects and writing outreach by hand, with inconsistent follow-up.",solution:"A multi-step agent that researches each prospect, personalizes outreach, follows up on schedule, and books meetings directly to the calendar.",tech:['Apify','Instantly.ai','OpenAI'],timeline:'5 days from discovery call to first outreach sent.',outcome:"Qualified meetings booked per week increased, and follow-up now happens on schedule without anyone tracking it manually.",result:'📅 More qualified meetings booked per week',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20outreach%20agent%20project.'},
+    4:{type:'Web Dev',title:'AI-Powered SaaS Landing Page',overview:"A SaaS product's marketing site wasn't converting — generic copy, slow load times, and no way to capture interest in real time.",challenge:"A SaaS product's marketing site was slow, generic, and gave visitors no reason to sign up on the first visit.",solution:"A fast, conversion-focused landing page in Next.js with an embedded AI chat widget for real-time lead capture.",tech:['Next.js','Tailwind','OpenAI'],timeline:'3 days from brief to launch.',outcome:"Signup rate improved measurably after launch, with the embedded AI chat capturing leads that would otherwise have bounced.",result:'🎯 Measurable lift in signup rate',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20landing%20page%20project.'},
+    5:{type:'SaaS',title:'Multi-Tenant SaaS MVP',overview:"A founder had a validated idea and no product — and needed something real in front of users fast, not a six-month build cycle.",challenge:"A founder had a validated idea but no product — and needed something real in front of users without a six-month build cycle.",solution:"A live multi-tenant product with authentication, role-based dashboards, and Stripe billing wired in from day one.",tech:['Next.js','Supabase','Stripe'],timeline:'9 days from kickoff to first paying customer.',outcome:"The product went live with paying customers within weeks of the first conversation, on infrastructure built to scale past the first cohort.",result:'🚀 Live with paying customers within weeks',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20SaaS%20MVP%20project.'},
+    6:{type:'Web Dev',title:'E-Commerce Store Rebuild',overview:"A boutique retailer's existing store was losing mobile customers at checkout due to a slow, dated experience.",challenge:"A boutique's old store was slow on mobile and losing customers at checkout.",solution:"A full rebuild with a new checkout flow, cleaner product catalog, and a mobile-first design.",tech:['Next.js','Stripe','PostgreSQL'],timeline:'6 days from audit to relaunch.',outcome:"Completed checkouts on mobile increased after relaunch, with no disruption to existing SEO rankings.",result:'🛒 More completed checkouts on mobile',cta:'https://wa.me/8801576458003?text=Hi%20Riju%2C%20I%27d%20like%20to%20discuss%20a%20similar%20e-commerce%20project.'}
+  };
+  const csBackdrop=document.getElementById('csModalBackdrop');
+  function openCaseStudy(id){
+    const d=caseStudies[id]; if(!d) return;
+    document.getElementById('csmType').textContent=d.type;
+    document.getElementById('csmTitle').textContent=d.title;
+    document.getElementById('csmOverview').textContent=d.overview;
+    document.getElementById('csmChallenge').textContent=d.challenge;
+    document.getElementById('csmSolution').textContent=d.solution;
+    document.getElementById('csmTech').innerHTML=d.tech.map(t=>`<span>${t}</span>`).join('');
+    document.getElementById('csmTimeline').textContent=d.timeline;
+    document.getElementById('csmOutcome').textContent=d.outcome;
+    document.getElementById('csmResult').textContent=d.result;
+    document.getElementById('csmCta').href=d.cta;
+    csBackdrop.classList.add('open');
+  }
+  function closeCaseStudy(){ csBackdrop.classList.remove('open'); }
+  document.querySelectorAll('.cs-view-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>openCaseStudy(btn.dataset.cs));
+  });
+  document.getElementById('csModalClose').addEventListener('click',closeCaseStudy);
+  csBackdrop.addEventListener('click',e=>{ if(e.target===csBackdrop) closeCaseStudy(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeCaseStudy(); });
+</script>
+</body>
+</html>
